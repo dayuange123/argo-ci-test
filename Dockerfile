@@ -6,7 +6,7 @@ COPY pom.xml .
 COPY settings.xml /root/.m2/settings.xml
 COPY src src
 RUN mvn package -DskipTests
-FROM openjdk:17
+FROM registry.cn-hangzhou.aliyuncs.com/test-lzy/openjdk:17
 WORKDIR .
 
 COPY --from=build ./target/*.jar ./app.jar
