@@ -1,5 +1,5 @@
 # syntax = docker/dockerfile:experimental
-FROM maven:3.8.1-openjdk-17-slim as build
+FROM registry.cn-hangzhou.aliyuncs.com/test-lzy/maven:3.8.1-openjdk-17-slim as build
 WORKDIR .
 COPY pom.xml .
 #RUN mvn dependency:go-offline -B
